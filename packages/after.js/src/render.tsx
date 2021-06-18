@@ -12,7 +12,7 @@ import { Assets, AsyncRouteProps, Chunks, AfterClientData } from './types';
 import { StaticRouterContext } from 'react-router';
 import { getAssets } from './getAssets';
 
-const modPageFn = function<Props>(Page: React.ComponentType<Props>) {
+const modPageFn = function <Props>(Page: React.ComponentType<Props>) {
   return function RenderAfteri(props: Props) {
     return <Page {...props} />;
   };
@@ -101,11 +101,13 @@ export async function render<T>(options: AfterRenderOptions<T>) {
     afterData,
   };
 
-  const renderPage = async (fn = modPageFn) => {
+  async function renderPage(fn = modPageFn) {
     // By default, we keep ReactDOMServer synchronous renderToString function
-    const defaultRenderer = (element: React.ReactElement<T>) => ({
-      html: ReactDOMServer.renderToString(element),
-    });
+    function defaultRenderer(element: React.ReactElement<T>) {
+      return {
+        html: ReactDOMServer.renderToString(element),
+      };
+    }
     const renderer = customRenderer || defaultRenderer;
     const asyncOrSyncRender = renderer(
       <StaticRouter location={req.url} context={context}>
@@ -127,7 +129,7 @@ export async function render<T>(options: AfterRenderOptions<T>) {
     }
 
     return { helmet, ...renderedContent };
-  };
+  }
 
   const { html, ...docProps } = await Doc.getInitialProps({
     req,

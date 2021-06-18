@@ -4,7 +4,7 @@
     "rootDir": "src",
     "declaration": true,
     "jsx": "react",
-    "target": "es5",
+    "target": "es2019",
     "moduleResolution": "node"
   },
   "exclude": [
