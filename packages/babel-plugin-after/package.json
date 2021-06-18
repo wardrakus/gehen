@@ -6,14 +6,15 @@
   "main": "lib/index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jaredpalmer/after.js.git"
+    "url": "git@github.com:batusai513/gehen.git",
+    "directory": "packages/babel-plugin-after"
   },
+  "author": "Richard Roncancio <batusai513@msn.com>",
   "keywords": [
     "babel",
     "plugin",
     "afterjs"
   ],
-  "author": "Nima Arefi <nimaarefi@outlook.com> (https://twitter.com/nima_arf)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/jaredpalmer/after.js/issues"

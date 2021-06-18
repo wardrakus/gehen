@@ -1,10 +1,18 @@
 {
   "private": true,
-  "bugs": "https://github.com/jaredpalmer/after.js/issues",
-  "homepage": "https://github.com/jaredpalmer/after.js/#readme",
+  "bugs": "https://github.com/batusai513/gehen/issues",
+  "homepage": "https://github.com/batusai513/gehen/#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jaredpalmer/after.js.git"
+    "url": "git+https://github.com/batusai513/gehen.git"
+  },
+  "command": {
+    "publish": {
+      "conventionalCommits": true,
+      "message": "chore(release): publish",
+      "registry": "https://npm.pkg.github.com",
+      "allowBranch": "master"
+    }
   },
   "packages": ["packages/*"],
   "npmClient": "yarn",
