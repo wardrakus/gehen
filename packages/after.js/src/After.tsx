@@ -158,9 +158,12 @@ class Afterparty extends React.Component<AfterpartyProps, AfterpartyState> {
 
     return (
       <Switch location={location}>
+        {/*@ts-expect-error I dont know */}
         {initialData?.statusCode === 404 && (
           <Route component={this.NotfoundComponent} path={location.pathname} />
         )}
+
+        {/*@ts-expect-error I dont know */}
         {initialData?.redirectTo && <Redirect to={initialData.redirectTo} />}
         {getAllRoutes(this.props.routes).map((r, i) => (
           <Route
@@ -169,6 +172,7 @@ class Afterparty extends React.Component<AfterpartyProps, AfterpartyState> {
             exact={r.exact}
             render={(props) =>
               React.createElement(r.component, {
+                //@ts-expect-error I dont know
                 ...initialData,
                 history: props.history,
                 match: props.match,

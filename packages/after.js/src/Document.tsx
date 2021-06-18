@@ -18,6 +18,7 @@ export class Document extends React.Component<DocumentProps> {
     const bodyAttrs = helmet.bodyAttributes.toComponent();
 
     return (
+      //@ts-expect-error I dont know
       <html {...htmlAttrs}>
         <head>
           <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
@@ -28,6 +29,7 @@ export class Document extends React.Component<DocumentProps> {
           {helmet.link.toComponent()}
           <AfterStyles />
         </head>
+        {/*@ts-expect-error I dont know*/}
         <body {...bodyAttrs}>
           <AfterRoot />
           <AfterData />
