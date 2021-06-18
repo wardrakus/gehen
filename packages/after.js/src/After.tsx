@@ -38,10 +38,10 @@ class Afterparty extends React.Component<AfterpartyProps, AfterpartyState> {
     data: this.props.data.initialData,
     previousLocation: null,
     currentLocation: this.props.location,
-    isLoading: false
+    isLoading: false,
   };
 
-  prefetcherCache: object = {};
+  prefetcherCache: Record<string, unknown> = {};
   NotfoundComponent:
     | React.ComponentType<RouteComponentProps<any>>
     | React.ComponentType<any> = get404Component(this.props.routes);
@@ -62,7 +62,7 @@ class Afterparty extends React.Component<AfterpartyProps, AfterpartyState> {
       return {
         previousLocation: state.previousLocation || previousLocation,
         currentLocation,
-        isLoading: true
+        isLoading: true,
       };
     }
 
@@ -88,7 +88,7 @@ class Afterparty extends React.Component<AfterpartyProps, AfterpartyState> {
 
       const { scrollToTop } = data.afterData;
 
-      const instantMode = isInstantTransition(transitionBehavior)
+      const instantMode = isInstantTransition(transitionBehavior);
 
       // Only for page changes, prevent scroll up for anchor links
       if (
@@ -123,7 +123,7 @@ class Afterparty extends React.Component<AfterpartyProps, AfterpartyState> {
 
           this.setState({ previousLocation: null, data, isLoading: false });
         })
-        .catch(e => {
+        .catch((e) => {
           // @todo we should more cleverly handle errors???
           console.log(e);
         });
@@ -140,7 +140,7 @@ class Afterparty extends React.Component<AfterpartyProps, AfterpartyState> {
           [pathname]: data,
         };
       })
-      .catch(e => console.log(e));
+      .catch((e) => console.log(e));
   };
 
   render() {
@@ -148,33 +148,26 @@ class Afterparty extends React.Component<AfterpartyProps, AfterpartyState> {
     const { location: currentLocation, transitionBehavior } = this.props;
     const initialData = this.prefetcherCache[currentLocation.pathname] || data;
 
-    const instantMode = isInstantTransition(transitionBehavior)
+    const instantMode = isInstantTransition(transitionBehavior);
 
     // when we are in the instant mode we want to pass the right location prop
     // to the <Route /> otherwise it will render previous matche component
-    const location =
-      instantMode
-        ? currentLocation
-        : previousLocation || currentLocation;
+    const location = instantMode
+      ? currentLocation
+      : previousLocation || currentLocation;
 
     return (
       <Switch location={location}>
-        {initialData?.statusCode === 404 &&
-          (
-            <Route
-              component={this.NotfoundComponent}
-              path={location.pathname}
-            />
-          )}
-        {initialData?.redirectTo && (
-          <Redirect to={initialData.redirectTo} />
+        {initialData?.statusCode === 404 && (
+          <Route component={this.NotfoundComponent} path={location.pathname} />
         )}
+        {initialData?.redirectTo && <Redirect to={initialData.redirectTo} />}
         {getAllRoutes(this.props.routes).map((r, i) => (
           <Route
             key={`route--${i}`}
             path={r.path}
             exact={r.exact}
-            render={props =>
+            render={(props) =>
               React.createElement(r.component, {
                 ...initialData,
                 history: props.history,
