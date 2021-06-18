@@ -5,7 +5,7 @@
   "description": "Build isomorphic Javascript applications with ease.",
   "repository": {
     "type": "git",
-    "url": "git@github.com:batusai513/gehen.git",
+    "url": "git@github.com:wardrakus/gehen.git",
     "directory": "packages/after.js"
   },
   "author": "Richard Roncancio <batusai513@msn.com>",

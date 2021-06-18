@@ -1,10 +1,10 @@
 {
   "private": true,
-  "bugs": "https://github.com/batusai513/gehen/issues",
-  "homepage": "https://github.com/batusai513/gehen/#readme",
+  "bugs": "https://github.com/wardrakus/gehen/issues",
+  "homepage": "https://github.com/wardrakus/gehen/#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/batusai513/gehen.git"
+    "url": "git+https://github.com/wardrakus/gehen.git"
   },
   "command": {
     "publish": {

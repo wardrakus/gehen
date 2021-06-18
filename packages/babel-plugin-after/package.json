@@ -6,7 +6,7 @@
   "main": "lib/index.js",
   "repository": {
     "type": "git",
-    "url": "git@github.com:batusai513/gehen.git",
+    "url": "git@github.com:wardrakus/gehen.git",
     "directory": "packages/babel-plugin-after"
   },
   "author": "Richard Roncancio <batusai513@msn.com>",

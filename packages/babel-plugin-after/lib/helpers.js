@@ -67,9 +67,9 @@ function getMagicWebpackComments(importArgNode) {
   var results = [];
 
   if (leadingComments && leadingComments.length) {
-    leadingComments.forEach(function(comment) {
+    leadingComments.forEach(function (comment) {
       try {
-        var validMagicString = validMagicStrings.filter(function(str) {
+        var validMagicString = validMagicStrings.filter(function (str) {
           return new RegExp(''.concat(str, '\\w*:')).test(comment.value);
         }); // keep this comment if we found a match
 
@@ -89,13 +89,13 @@ function addChunkNameToNode(argPath, chunkName) {
   var otherValidMagicComments = getMagicWebpackComments(argPath.node);
   delete argPath.node.leadingComments;
   argPath.addComment('leading', " webpackChunkName: '".concat(chunkName, "' "));
-  otherValidMagicComments.forEach(function(validLeadingComment) {
+  otherValidMagicComments.forEach(function (validLeadingComment) {
     return argPath.addComment('leading', validLeadingComment.value);
   });
 }
 
 function getAsyncComponentParamter(loaderArguments, name, t) {
-  var index = loaderArguments.findIndex(function(property) {
+  var index = loaderArguments.findIndex(function (property) {
     return t.isIdentifier(property.node.key, {
       name: name,
     });

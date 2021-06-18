@@ -17,33 +17,50 @@ function _interopRequireDefault(obj) {
 
 function _slicedToArray(arr, i) {
   return (
-    _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest()
+    _arrayWithHoles(arr) ||
+    _iterableToArrayLimit(arr, i) ||
+    _unsupportedIterableToArray(arr, i) ||
+    _nonIterableRest()
   );
 }
 
 function _nonIterableRest() {
-  throw new TypeError('Invalid attempt to destructure non-iterable instance');
+  throw new TypeError(
+    'Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.'
+  );
+}
+
+function _unsupportedIterableToArray(o, minLen) {
+  if (!o) return;
+  if (typeof o === 'string') return _arrayLikeToArray(o, minLen);
+  var n = Object.prototype.toString.call(o).slice(8, -1);
+  if (n === 'Object' && o.constructor) n = o.constructor.name;
+  if (n === 'Map' || n === 'Set') return Array.from(o);
+  if (n === 'Arguments' || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n))
+    return _arrayLikeToArray(o, minLen);
+}
+
+function _arrayLikeToArray(arr, len) {
+  if (len == null || len > arr.length) len = arr.length;
+  for (var i = 0, arr2 = new Array(len); i < len; i++) {
+    arr2[i] = arr[i];
+  }
+  return arr2;
 }
 
 function _iterableToArrayLimit(arr, i) {
-  if (
-    !(
-      Symbol.iterator in Object(arr) ||
-      Object.prototype.toString.call(arr) === '[object Arguments]'
-    )
-  ) {
-    return;
-  }
+  var _i =
+    arr == null
+      ? null
+      : (typeof Symbol !== 'undefined' && arr[Symbol.iterator]) ||
+        arr['@@iterator'];
+  if (_i == null) return;
   var _arr = [];
   var _n = true;
   var _d = false;
-  var _e = undefined;
+  var _s, _e;
   try {
-    for (
-      var _i = arr[Symbol.iterator](), _s;
-      !(_n = (_s = _i.next()).done);
-      _n = true
-    ) {
+    for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) {
       _arr.push(_s.value);
       if (i && _arr.length === i) break;
     }
@@ -66,8 +83,8 @@ function _arrayWithHoles(arr) {
 
 var asyncComponentImportNames = [];
 var validImportSources = [
-  '@jaredpalmer/after',
-  '@jaredpalmer/after/asyncComponent',
+  '@wardrakus/after',
+  '@wardrakus/after/asyncComponent',
 ];
 
 function _default(_ref) {
@@ -82,14 +99,14 @@ function _default(_ref) {
           validImportSources.includes(path.node.source.value)
         ) {
           var specifiers = path.node.specifiers;
-          var asyncComponentImport = specifiers.filter(function(specifier) {
+          var asyncComponentImport = specifiers.filter(function (specifier) {
             return (
               t.isImportDefaultSpecifier(specifier) ||
               (t.isImportSpecifier(specifier) &&
                 specifier.imported.name === 'asyncComponent')
             );
           });
-          asyncComponentImport.forEach(function(asyncComponentImport) {
+          asyncComponentImport.forEach(function (asyncComponentImport) {
             asyncComponentImportNames.push(asyncComponentImport.local.name);
           });
         }
@@ -99,7 +116,7 @@ function _default(_ref) {
         // if there was no import statement just return
         if (asyncComponentImportNames.length === 0) return; // check for "component" in object properties and function call in value { component: hello() }
 
-        var component = path.node.properties.find(function(property) {
+        var component = path.node.properties.find(function (property) {
           return (
             t.isIdentifier(property.key, {
               name: 'component',
