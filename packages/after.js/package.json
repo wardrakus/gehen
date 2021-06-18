@@ -92,6 +92,6 @@
     "typescript": "^4.3.4"
   },
   "dependencies": {
-    "babel-plugin-after": "^3.2.1"
+    "@wardrakus/babel-plugin-after": "^3.2.1"
   }
 }

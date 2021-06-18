@@ -1,5 +1,5 @@
 {
-  "name": "create-after-app",
+  "name": "@wardrakus/create-after-app",
   "version": "3.2.1",
   "description": "CLI tool to bootstrap After.js applications with no configuration",
   "main": "index.js",

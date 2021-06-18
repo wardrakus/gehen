@@ -1,5 +1,5 @@
 {
-  "name": "babel-plugin-after",
+  "name": "@wardrakus/babel-plugin-after",
   "private": false,
   "version": "3.2.1",
   "description": "Babel plugin for After.js",
