@@ -1,4 +1,4 @@
-import { asyncComponent } from '@jaredpalmer/after';
+import { asyncComponent } from '@wardrakus/gehen';
 const routes = [
   {
     path: '/foo',

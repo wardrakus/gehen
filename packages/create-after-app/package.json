@@ -4,16 +4,16 @@
   "description": "CLI tool to bootstrap After.js applications with no configuration",
   "main": "index.js",
   "license": "MIT",
-  "author": "Jared Palmer <jared@palmer.net> (http://jaredpalmer.com)",
+  "author": "Richard Roncancio <batusai513@msn.com>",
   "scripts": {
     "test:ci": "echo \"no test specified for create-after-app\" && exit 0"
   },
   "engines": {
     "node": ">=10"
   },
-  "repository": "jaredpalmer/after.js",
+  "repository": "batusai513/gehen",
   "bugs": {
-    "url": "https://github.com/jaredpalmer/after/issues"
+    "url": "https://github.com/batusai513/gehen/issues"
   },
   "bin": {
     "create-after-app": "./bin/create-after-app"

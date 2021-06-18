@@ -5,13 +5,13 @@ Upgraded react-helmet from version 5 to 6
 ## Update Dependencies
 
 ```bash
-yarn upgrade @jaredpalmer/after react-helmet --latest
+yarn upgrade @wardrakus/gehen react-helmet --latest
 ```
 
 or
 
 ```bash
-npm install @jaredpalmer/after@latest react-helmet@latest --save
+npm install @wardrakus/gehen@latest react-helmet@latest --save
 ```
 
 ## Breaking Changes
@@ -55,13 +55,13 @@ in After.js 2 this problem is solved and it sends all JS and CSS files needed fo
 ## Update Dependencies
 
 ```bash
-yarn upgrade @jaredpalmer/after razzle --latest
+yarn upgrade @wardrakus/gehen razzle --latest
 ```
 
 or
 
 ```bash
-npm install @jaredpalmer/after@latest razzle@latest --save
+npm install @wardrakus/gehen@latest razzle@latest --save
 ```
 
 ## Breaking Changes
@@ -79,7 +79,7 @@ Create a `.babelrc` file in the root of the project (next to the package.json)
 }
 ```
 
-> Check [babel-plugin-after](https://github.com/jaredpalmer/after.js/packages/babel-plugin-after) repo for more options.
+> Check [babel-plugin-after](https://github.com/batusai513/gehen/packages/babel-plugin-after) repo for more options.
 
 ### Update `server.js`
 
@@ -90,7 +90,7 @@ From:
 ```jsx
 // server.js
 import express from 'express';
-import { render } from '@jaredpalmer/after';
+import { render } from '@wardrakus/gehen';
 import routes from './routes';
 import MyDocument from './Document';
 
@@ -126,7 +126,7 @@ To:
 // server.js
 
 import express from 'express';
-import { render } from '@jaredpalmer/after';
+import { render } from '@wardrakus/gehen';
 import routes from './routes';
 import MyDocument from './Document';
 
@@ -168,7 +168,7 @@ From:
 // Document.js
 
 import React from 'react';
-import { AfterRoot, AfterData } from '@jaredpalmer/after';
+import { AfterRoot, AfterData } from '@wardrakus/gehen';
 
 class Document extends React.Component {
   static async getInitialProps({ assets, data, renderPage }) {
@@ -225,7 +225,7 @@ import {
   AfterData,
   AfterScripts,
   AfterStyles,
-} from '@jaredpalmer/after';
+} from '@wardrakus/gehen';
 
 class Document extends React.Component {
   static async getInitialProps({ renderPage }) {
@@ -274,7 +274,7 @@ From:
 // routes.js
 
 import Home from './Home';
-import { asyncComponent } from '@jaredpalmer/after';
+import { asyncComponent } from '@wardrakus/gehen';
 
 export default [
   {
@@ -305,7 +305,7 @@ To:
 // routes.js
 
 import Home from './Home';
-import { asyncComponent } from '@jaredpalmer/after';
+import { asyncComponent } from '@wardrakus/gehen';
 
 export default [
   {
@@ -398,7 +398,7 @@ Create a `.babelrc` file in the root of the project (next to the package.json)
 }
 ```
 
-> Check [babel-plugin-after](https://github.com/jaredpalmer/after.js/packages/babel-plugin-after) repo for more options.
+> Check [babel-plugin-after](https://github.com/batusai513/gehen/packages/babel-plugin-after) repo for more options.
 
 **by using the Babel plugin THERE IS NO NEED TO CHANGE your routes, and your current `routes.js` file works fine.**
 
@@ -408,7 +408,7 @@ There is a limitation with babel plugin, code below won't work with Babel plugin
 
 ```jsx
 import Home from './Home';
-import { asyncComponent } from '@jaredpalmer/after';
+import { asyncComponent } from '@wardrakus/gehen';
 
 const routes = [
   {
@@ -462,7 +462,7 @@ function myTransformations(route) {
 }
 ```
 
-> for more details visit [babel-plugin README](https://github.com/jaredpalmer/after.js/packages/babel-plugin-after#how-its-wokring)
+> for more details visit [babel-plugin README](https://github.com/batusai513/gehen/packages/babel-plugin-after#how-its-wokring)
 
 ### Deprecated Features
 

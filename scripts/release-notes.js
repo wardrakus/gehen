@@ -104,7 +104,7 @@ async function main() {
 
   // Add compare link
   finalMessage.push(
-    `https://github.com/jaredpalmer/after.js/compare/${firstVersion}...${lastVersion}`
+    `https://github.com/batusai513/gehen/compare/${firstVersion}...${lastVersion}`
   );
 
   return {

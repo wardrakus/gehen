@@ -1,5 +1,5 @@
 import express from 'express';
-import { render } from '@jaredpalmer/after';
+import { render } from '@wardrakus/gehen';
 import Document from './Document';
 import routes from './routes';
 import configureStore from './common/store/configureStore';

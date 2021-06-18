@@ -4,7 +4,7 @@
 
 ### Using `create-after-app`
 
-Execute [`create-after-app`](https://github.com/jaredpalmer/after.js/tree/master/packages/create-after-app) with [npm](https://docs.npmjs.com/cli/init) or [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/) to bootstrap the example:
+Execute [`create-after-app`](https://github.com/batusai513/gehen/tree/master/packages/create-after-app) with [npm](https://docs.npmjs.com/cli/init) or [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/) to bootstrap the example:
 
 ```bash
 npx create-after-app --example with-material-ui with-material-ui-app
@@ -12,7 +12,7 @@ npx create-after-app --example with-material-ui with-material-ui-app
 
 ### Download manually
 
-Download the example [or clone the whole project](https://github.com/jaredpalmer/after.js.git):
+Download the example [or clone the whole project](https://github.com/batusai513/gehen.git):
 
 ```bash
 curl https://codeload.github.com/jaredpalmer/after.js/tar.gz/master | tar -xz --strip=2 after.js-master/examples/with-material-ui

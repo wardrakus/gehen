@@ -2,7 +2,7 @@
 
 # After.js
 
-[![npm bundle size (scoped)](https://img.shields.io/bundlephobia/minzip/@jaredpalmer/after)](https://bundlephobia.com/result?p=@jaredpalmer/after) [![npm](https://img.shields.io/npm/dm/@jaredpalmer/after)](https://www.npmjs.com/package/@jaredpalmer/after) [![Known Vulnerabilities](https://snyk.io/test/github/jaredpalmer/after.js/badge.svg?targetFile=package.json)](https://snyk.io/test/github/jaredpalmer/after.js?targetFile=package.json) ![Github Actions](https://github.com/jaredpalmer/after.js/workflows/Release/badge.svg) [![GitHub version](https://badge.fury.io/gh/jaredpalmer%2Fafter.js.svg)](https://badge.fury.io/gh/jaredpalmer%2Fafter.js) ![After-status](https://david-dm.org/jaredpalmer/after.js.svg?path=packages/after.js) [![license](https://badgen.now.sh/badge/license/MIT)](./LICENSE) [![Discord](https://img.shields.io/discord/769256827007139912?label=%F0%9F%92%AC%20%20join%20us%20on%20discord&style=plastic)](https://discord.com/invite/RevdZTYMzr)
+[![npm bundle size (scoped)](https://img.shields.io/bundlephobia/minzip/@wardrakus/gehen)](https://bundlephobia.com/result?p=@w@wardrakus/r) [![npm](https://img.shields.io/npm/dm/@war@wardrakus/](https://www.npmjs.com/package/@wardr@wardrakus/![Known Vulnerabilities](https://snyk.io/test/github/jaredpalmer/after.js/badge.svg?targetFile=package.json)](https://snyk.io/test/github/jaredpalmer/after.js?targetFile=package.json) ![Github Actions](https://github.com/batusai513/gehen/workflows/Release/badge.svg) [![GitHub version](https://badge.fury.io/gh/jaredpalmer%2Fafter.js.svg)](https://badge.fury.io/gh/jaredpalmer%2Fafter.js) ![After-status](https://david-dm.org/jaredpalmer/after.js.svg?path=packages/after.js) [![license](https://badgen.now.sh/badge/license/MIT)](./LICENSE) [![Discord](https://img.shields.io/discord/769256827007139912?label=%F0%9F%92%AC%20%20join%20us%20on%20discord&style=plastic)](https://discord.com/invite/RevdZTYMzr)
 
 If [Next.js](https://github.com/zeit/next.js) and [React Router](https://github.com/reacttraining/react-router) had a baby...
 
@@ -282,7 +282,7 @@ React Router can detect No Match (404) Routes and show a fallback component, you
 import React from 'react';
 import Home from './Home';
 import Notfound from './Notfound';
-import { asyncComponent } from '@jaredpalmer/after';
+import { asyncComponent } from '@wardrakus/gehen';
 
 export default [
   // normal route
@@ -402,7 +402,7 @@ After.js lets you easily define lazy-loaded or code-split routes in your `_route
 // ./src/_routes.js
 import React from 'react';
 import Home from './Home';
-import { asyncComponent } from '@jaredpalmer/after';
+import { asyncComponent } from '@wardrakus/gehen';
 
 export default [
   // normal route
@@ -475,7 +475,7 @@ import {
   AfterData,
   AfterScripts,
   AfterStyles,
-} from '@jaredpalmer/after';
+} from '@wardrakus/gehen';
 
 class Document extends React.Component {
   static async getInitialProps({ renderPage }) {
@@ -520,7 +520,7 @@ If you were using something like `styled-components`, and you need to wrap you e
 // ./src/Document.js
 import React from 'react';
 import { ServerStyleSheet } from 'styled-components';
-import { AfterRoot, AfterData, AfterScripts } from '@jaredpalmer/after';
+import { AfterRoot, AfterData, AfterScripts } from '@wardrakus/gehen';
 
 export default class Document extends React.Component {
   static async getInitialProps({ renderPage }) {
@@ -565,7 +565,7 @@ To use your custom `<Document>`, pass it to the `Document` option of your After.
 ```js
 // ./src/server.js
 import express from 'express';
-import { render } from '@jaredpalmer/after';
+import { render } from '@wardrakus/gehen';
 import routes from './routes';
 import MyDocument from './Document';
 
@@ -613,7 +613,7 @@ Example :
 // ./src/server.js
 import React from 'react';
 import express from 'express';
-import { render } from '@jaredpalmer/after';
+import { render } from '@wardrakus/gehen';
 import { renderToString } from 'react-dom/server';
 import { ApolloProvider, getDataFromTree } from 'react-apollo';
 import routes from './routes';

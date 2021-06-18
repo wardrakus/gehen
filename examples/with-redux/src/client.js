@@ -1,7 +1,7 @@
 import React from 'react';
 import { hydrate } from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
-import { ensureReady, After, getSerializedData } from '@jaredpalmer/after';
+import { ensureReady, After, getSerializedData } from '@wardrakus/gehen';
 import routes from './routes';
 import './client.css';
 import { Provider } from 'react-redux';

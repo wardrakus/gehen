@@ -6,7 +6,7 @@
   "main": "lib/index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jaredpalmer/after.js.git"
+    "url": "git+https://github.com/batusai513/gehen.git"
   },
   "keywords": [
     "babel",
@@ -16,9 +16,9 @@
   "author": "Nima Arefi <nimaarefi@outlook.com> (https://twitter.com/nima_arf)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/jaredpalmer/after.js/issues"
+    "url": "https://github.com/batusai513/gehen/issues"
   },
-  "homepage": "https://github.com/jaredpalmer/after.js/packages/babel-plugin-after#readme",
+  "homepage": "https://github.com/batusai513/gehen/packages/babel-plugin-after#readme",
   "scripts": {
     "test:ci": "echo \"no test specified for babel-plugin-after\" && exit 0",
     "clean": "rm -rf lib",

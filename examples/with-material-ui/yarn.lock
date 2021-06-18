@@ -827,9 +827,9 @@
   resolved "https://registry.yarnpkg.com/@emotion/hash/-/hash-0.8.0.tgz#bbbff68978fefdbe68ccb533bc8cbe1d1afb5413"
   integrity sha512-kBJtf7PH6aWwZ6fka3zQ0p6SBYzx4fl1LoZXE2RrnYST9Xljm7WfKJrU4g/Xr3Beg72MLrp1AWNUmuYJTL7Cow==
 
-"@jaredpalmer/after@1.6.1":
+"@wardrakus/gehen@1.6.1":
   version "1.6.1"
-  resolved "https://registry.yarnpkg.com/@jaredpalmer/after/-/after-1.6.1.tgz#24c3fb8df6d95af1522a0e13fd1026253a91228d"
+  resolved "https://registry.yarnpkg.com/@wardrakus/gehen/-/after-1.6.1.tgz#24c3fb8df6d95af1522a0e13fd1026253a91228d"
   integrity sha512-vkqwl73PcXHh0y3BmLR1DhE4k094hUKhY4I49THyzvv4FDrQqJb/3hh5MVRENr0vaLAkHbMR4f4XcxUj2T+OIQ==
 
 "@material-ui/core@^4.9.10":

@@ -6,7 +6,7 @@ import {
   AfterStyles,
   SerializeData,
   __AfterContext,
-} from '@jaredpalmer/after';
+} from '@wardrakus/gehen';
 import { Provider } from 'react-redux';
 import serialize from 'serialize-javascript';
 

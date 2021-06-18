@@ -5,7 +5,7 @@ import {
   AfterScripts,
   AfterStyles,
   __AfterContext,
-} from "@jaredpalmer/after";
+} from "@wardrakus/gehen";
 import { CounterProvider } from "./context/AppContext";
 
 class Document extends React.Component {

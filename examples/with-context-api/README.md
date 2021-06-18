@@ -2,7 +2,7 @@
 
 ## How to use
 
-Download the example [or clone the whole project](https://github.com/jaredpalmer/after.js.git):
+Download the example [or clone the whole project](https://github.com/batusai513/gehen.git):
 
 ```bash
 curl https://codeload.github.com/jaredpalmer/after.js/tar.gz/master | tar -xz --strip=2 razzle-master/examples/basic

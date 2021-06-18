@@ -12,12 +12,12 @@ exports.help = function() {
   return `
     Only ${chalk.green('<project-directory>')} is required.
     If you have any problems, do not hesitate to file an issue:
-      ${chalk.cyan('https://github.com/jaredpalmer/after.js/issues/new')}
+      ${chalk.cyan('https://github.com/batusai513/gehen/issues/new')}
   `;
 };
 
 exports.exampleHelp = function() {
-  return `Example from https://github.com/jaredpalmer/after.js/tree/master/examples/ ${output.param(
+  return `Example from https://github.com/batusai513/gehen/tree/master/examples/ ${output.param(
     'example-path'
   )}`;
 };
@@ -97,6 +97,6 @@ exports.start = function(projectName) {
     ${output.cmd(commands.start)}
     
   Questions? Feedback? Please let me know!
-  ${chalk.green('https://github.com/jaredpalmer/after.js/issues')}
+  ${chalk.green('https://github.com/batusai513/gehen/issues')}
 `;
 };

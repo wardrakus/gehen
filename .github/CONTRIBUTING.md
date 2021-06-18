@@ -63,7 +63,7 @@ immediately in all the examples.
 Only first time add a upstream remote to your fork:
 
 ```bash
-git remote add upstream https://github.com/jaredpalmer/after.js.git
+git remote add upstream https://github.com/batusai513/gehen.git
 ```
 
 When you want to pull down changes to your fork enter the following into your terminal:
