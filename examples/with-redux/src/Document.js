@@ -6,13 +6,13 @@ import {
   AfterStyles,
   SerializeData,
   __AfterContext,
-} from '@jaredpalmer/after';
+} from '@wardrakus/after';
 import { Provider } from 'react-redux';
 import serialize from 'serialize-javascript';
 
 class Document extends React.Component {
   static async getInitialProps({ renderPage, store }) {
-    const page = await renderPage(App => props => (
+    const page = await renderPage((App) => (props) => (
       <Provider store={store}>
         <App {...props} />
       </Provider>

@@ -4,7 +4,7 @@ import {
   AfterData,
   AfterScripts,
   AfterStyles,
-} from '@jaredpalmer/after';
+} from '@wardrakus/after';
 import { ServerStyleSheets, ThemeProvider } from '@material-ui/core/styles';
 import { jss } from './RTL';
 import theme from './theme';
@@ -12,12 +12,13 @@ import theme from './theme';
 export default class Document extends React.Component {
   static async getInitialProps({ renderPage }) {
     const sheets = new ServerStyleSheets({ jss });
-    const page = await renderPage(App => props =>
-      sheets.collect(
-        <ThemeProvider theme={theme}>
-          <App {...props} />
-        </ThemeProvider>
-      )
+    const page = await renderPage(
+      (App) => (props) =>
+        sheets.collect(
+          <ThemeProvider theme={theme}>
+            <App {...props} />
+          </ThemeProvider>
+        )
     );
     const css = sheets.getStyleElement();
     return { css, ...page };

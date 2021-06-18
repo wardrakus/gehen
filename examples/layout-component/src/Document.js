@@ -4,12 +4,12 @@ import {
   AfterData,
   AfterScripts,
   AfterStyles,
-} from '@jaredpalmer/after';
+} from '@wardrakus/after';
 import Layout from './Layout';
 
 class Document extends React.Component {
   static async getInitialProps({ renderPage }) {
-    const page = await renderPage(App => props => (
+    const page = await renderPage((App) => (props) => (
       <Layout>
         <App {...props} />
       </Layout>
