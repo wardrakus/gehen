@@ -26,7 +26,7 @@
     "build:esm": "tsc -p tsconfig.build.json --module es2015 --outDir build/esm",
     "build:cjs": "tsc -p tsconfig.build.json --module commonjs --outDir build/cjs",
     "start": "tsc -p tsconfig.build.json --module commonjs --outDir build -w",
-    "test": "razzle test --env=jsdom --no-cache",
+    "test": "jest test --env=jsdom --no-cache",
     "test:ci": "CI=true yarn test",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
   },

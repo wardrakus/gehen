@@ -34,5 +34,8 @@
     "trailingComma": "es5",
     "singleQuote": true,
     "semi": true
+  },
+  "resolutions": {
+    "jest-environment-jsdom": "^25.4.0"
   }
 }
