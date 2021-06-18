@@ -47,7 +47,9 @@ export const AfterRoot: React.FC = () => {
   return <div id="root" dangerouslySetInnerHTML={{ __html: html }} />;
 };
 
-export const AfterData: React.FC<{ data?: object }> = ({ data }) => {
+export const AfterData: React.FC<{ data?: Record<string, unknown> }> = ({
+  data,
+}) => {
   const { data: contextData } = useAfterContext();
   return (
     <script
@@ -66,7 +68,7 @@ export const AfterStyles: React.FC = () => {
   return (
     <>
       {assets.client.css && <link rel="stylesheet" href={assets.client.css} />}
-      {styles.map(path => (
+      {styles.map((path) => (
         <link key={path} rel="stylesheet" href={path} />
       ))}
     </>
@@ -77,7 +79,7 @@ export const AfterScripts: React.FC = () => {
   const { scripts, assets } = useAfterContext();
   return (
     <>
-      {scripts.filter(isJS).map(path => (
+      {scripts.filter(isJS).map((path) => (
         <script
           key={path}
           defer

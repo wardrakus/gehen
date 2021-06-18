@@ -4,10 +4,10 @@
   "version": "independent",
   "devDependencies": {
     "got": "^11.0.2",
-    "husky": "^4.2.3",
-    "lerna": "^3.20.2",
-    "lint-staged": "^10.0.8",
-    "prettier": "^1.19.1",
+    "husky": "^6.0.0",
+    "lerna": "^4.0.0",
+    "lint-staged": "^11.0.0",
+    "prettier": "^2.3.1",
     "release": "^6.1.0"
   },
   "workspaces": [
@@ -17,12 +17,8 @@
     "test:ci": "lerna run test:ci --stream",
     "format": "prettier --trailing-comma es5 --single-quote --semi --write \"**/*.+(js|jsx|json|yml|yaml|css|less|scss|ts|tsx|md|mdx)\"",
     "publish-canary": "lerna version prerelease --preid canary --force-publish && release --pre",
-    "publish-stable": "lerna version --force-publish && release && node ./scripts/release-notes.js"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
+    "publish-stable": "lerna version --force-publish && release && node ./scripts/release-notes.js",
+    "prepare": "husky install"
   },
   "lint-staged": {
     "**/*.+(js|jsx|json|yml|yaml|css|less|scss|ts|tsx|md|mdx)": [
@@ -34,5 +30,9 @@
     "trailingComma": "es5",
     "singleQuote": true,
     "semi": true
+  },
+  "resolutions": {
+    "jest-environment-jsdom": "^27.0.0",
+    "jest": "^27.0.4"
   }
 }

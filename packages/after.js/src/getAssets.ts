@@ -1,6 +1,6 @@
 import { GetAssetsParams } from './types';
 import { isLoadableComponent } from './utils';
-// @ts-ignore
+// @ts-expect-error I dont know
 import logger from 'razzle-dev-utils/logger';
 
 export const errorMeesage = `all async routes must have a chunkName property with value of /* webpackChunkName: "MyChunkName" */ check your routes config or use babel-plugin-after`;

@@ -1,12 +1,12 @@
-import React from "react";
+import React from 'react';
 import {
   AfterRoot,
   AfterData,
   AfterScripts,
   AfterStyles,
   __AfterContext,
-} from "@jaredpalmer/after";
-import { CounterProvider } from "./context/AppContext";
+} from '@wardrakus/after';
+import { CounterProvider } from './context/AppContext';
 
 class Document extends React.Component {
   static async getInitialProps({ renderPage }) {
